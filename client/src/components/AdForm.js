@@ -5,6 +5,7 @@ import React from "react";
 //   }
 
 export default class App extends React.Component {
+
   render() {
     return (
         <div>
@@ -17,7 +18,7 @@ export default class App extends React.Component {
                 <input type="submit" value="Submit" />
                 <label>
                     Title:
-                    <input type="text" name="name" />
+                    <input type="text" name="name" required/>
                 </label>
                 <input type="submit" value="Submit" />
                 <label>
@@ -32,13 +33,15 @@ export default class App extends React.Component {
                 <input type="submit" value="Submit" />
                 <label>
                     Condition:
-                    <input type="text" name="name" />
                 </label>
-                {/* <select value={this.state.value} onChange={this.handleChange}>
+                <select
+                // value={this.state.value} 
+                // onChange={this.handleChange}
+                >
                     <option value="grapefruit">New</option>
                     <option value="lime">Used - good</option>
                     <option value="coconut">Used - like new</option>
-                </select>                 */}
+                </select>                
                 <label>
                     Description:
                     <input type="text" name="name" />
