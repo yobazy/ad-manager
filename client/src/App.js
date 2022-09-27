@@ -3,6 +3,7 @@ import React from "react";
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import AdForm from './components/AdForm';
+import ViewAds from './components/ViewAds'
 
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
@@ -28,6 +29,7 @@ function App() {
         <button type="button">Create Ad</button>
         <h3>View my ads</h3>
         <AdForm></AdForm>
+        <ViewAds></ViewAds>
         <Footer />
       </body>
     </div>
