@@ -1,4 +1,5 @@
 import React from "react";
+import './AdForm.css';
 
 // function handleChange(event) {
 //     setState({value: event.target.value});
@@ -8,10 +9,10 @@ export default class App extends React.Component {
 
   render() {
     return (
-        <div>
-            <h2>Create new listing</h2>
-            <form>
-                <label for="img">Photos (add up to 10):</label><br></br>
+        <div className="adform">
+            <h2 className="center">Create new listing</h2>
+            <form className="element">
+                <label for="img" className="center">Photos (add up to 10):</label><br></br>
                     <input type="file" id="img" name="img" accept="image/*" /><br></br>
                     <input type="file" id="img" name="img" accept="image/*" /><br></br>
                     <input type="file" id="img" name="img" accept="image/*" /><br></br>

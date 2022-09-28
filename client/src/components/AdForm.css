@@ -1,0 +1,20 @@
+.adform {
+    margin: auto;
+    width: 50%;
+    color:orange;
+    background-color:rgb(62, 62, 62);
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    border-color: 10px dotted red;
+}
+
+.element { 
+    margin: auto;
+    width: 50%;
+    border-color: 2px dotted red;
+}
+
+.center {
+    text-align: center;
+}
