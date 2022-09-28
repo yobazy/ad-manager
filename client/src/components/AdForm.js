@@ -11,7 +11,7 @@ export default class App extends React.Component {
     return (
         <div className="adform">
             <h2 className="center">Create new listing</h2>
-            <form className="element">
+            <form className="element" action="/publish" method="POST">
                 <label for="img" className="center">Photos (add up to 10):</label><br></br>
                     <input type="file" id="img" name="img" accept="image/*" /><br></br>
                     <input type="file" id="img" name="img" accept="image/*" /><br></br>
@@ -24,7 +24,7 @@ export default class App extends React.Component {
                     <input type="file" id="img" name="img" accept="image/*" /><br></br>
                 <label>
                     Title:
-                    <input type="text" name="name" required/>
+                    <input type="text" name="title" required/>
                 </label><br></br>
                 <label>
                     Price:
