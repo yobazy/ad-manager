@@ -3,7 +3,7 @@ import React from "react";
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import AdForm from './components/AdForm';
-import ViewAds from './components/ViewAds'
+import ViewAds from './components/ViewAds';
 
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
