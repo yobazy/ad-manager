@@ -1,9 +1,9 @@
 // import "./App.css";
-import React from "react";
+import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import AdForm from './components/AdForm';
-import ViewAds from './components/ViewAds';
+import ViewAds from './components/pages/ViewAds';
 
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
@@ -12,6 +12,10 @@ const switchListing = function switchToListing() {
 }
 
 function App() {
+  const [state, setState] = useState({
+    listings: [{title: "banana"}],
+  })
+
   return (
     <div className="App">
       <Navbar />
@@ -29,7 +33,7 @@ function App() {
         <button type="button">Create Ad</button>
         <h3>View my ads</h3>
         <AdForm></AdForm>
-        <ViewAds></ViewAds>
+        <ViewAds listings={state.listings}></ViewAds>
         <Footer />
       </body>
     </div>
