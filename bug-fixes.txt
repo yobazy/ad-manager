@@ -1,0 +1,2 @@
+This is where the bug fixes will be since ad-manager is not working at the moment.
+
