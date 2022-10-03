@@ -1,17 +1,36 @@
 import React from "react";
+import { useState } from "react";
 import './AdForm.css';
 
-// function handleChange(event) {
-//     setState({value: event.target.value});
-//   }
+// const handleChange = (event) => {
+//     setContactInfo({ ...adInfo, [event.target.name]: event.target.value });
+//   };
 
-export default class App extends React.Component {
+// const handleSubmit = (event) => {
+// // prevents the submit button from refreshing the page
+//     event.preventDefault();
+//     console.log(contactInfo);
+// };
 
-  render() {
+export default function AdForm() {
+    const [adInfo, setAdInfo] = useState({
+        title: ""
+        });
+
+    const handleChange = (event) => {
+            setAdInfo({ ...adInfo, [event.target.name]: event.target.value });
+    };
+        
+    const handleSubmit = (event) => {
+        // prevents the submit button from refreshing the page
+            event.preventDefault();
+            console.log(adInfo);
+    };
+
     return (
         <div className="adform">
             <h2 className="center">Create new listing</h2>
-            <form className="element" action="/publish" method="POST">
+            <form className="element" onSubmit={handleSubmit}>
                 <label for="img" className="center">Photos (add up to 10):</label><br></br>
                     <input type="file" id="img" name="img" accept="image/*" /><br></br>
                     <input type="file" id="img" name="img" accept="image/*" /><br></br>
@@ -24,15 +43,15 @@ export default class App extends React.Component {
                     <input type="file" id="img" name="img" accept="image/*" /><br></br>
                 <label>
                     Title:
-                    <input type="text" name="title" required/>
+                    <input type="text" name="title" className="custom-field" value={adInfo.title} onChange={handleChange}required/>
                 </label><br></br>
                 <label>
                     Price:
-                    <input type="text" name="name" />
+                    <input type="text" name="name" className="custom-field"/>
                 </label><br></br>
                 <label>
                     Category:
-                    <input type="text" name="name" />
+                    <input type="text" name="name" className="custom-field" />
                 </label><br></br>
                 <label>
                     Condition:
@@ -50,10 +69,15 @@ export default class App extends React.Component {
                     Description:
                     <textarea></textarea>
                 </label><br></br>
+                <label>
+                    Post to:
+                    <label>Fb Marketplace</label>
+                    <input type="checkbox" />
+                    <label>Kiiji</label>
+                    <input type="checkbox" />
+                </label><br></br>
                 <input type="submit" value="Submit" />
-
             </form>
         </div>
     )
   }
-}
