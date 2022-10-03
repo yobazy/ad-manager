@@ -14,7 +14,9 @@ import './AdForm.css';
 
 export default function AdForm() {
     const [adInfo, setAdInfo] = useState({
-        title: ""
+        title: "",
+        price: "",
+        description: ""
         });
 
     const handleChange = (event) => {
@@ -43,15 +45,15 @@ export default function AdForm() {
                     <input type="file" id="img" name="img" accept="image/*" /><br></br>
                 <label>
                     Title:
-                    <input type="text" name="title" className="custom-field" value={adInfo.title} onChange={handleChange}required/>
+                    <input type="text" name="title" className="custom-field" value={adInfo.title} onChange={handleChange} required/>
                 </label><br></br>
                 <label>
                     Price:
-                    <input type="text" name="name" className="custom-field"/>
+                    <input type="text" name="price" className="custom-field" value={adInfo.price} onChange={handleChange}/>
                 </label><br></br>
                 <label>
                     Category:
-                    <input type="text" name="name" className="custom-field" />
+                    <input type="text" name="category" className="custom-field"/>
                 </label><br></br>
                 <label>
                     Condition:
@@ -67,7 +69,7 @@ export default function AdForm() {
                     
                 <label>
                     Description:
-                    <textarea></textarea>
+                    <textarea name="description" value={adInfo.description} onChange={handleChange}></textarea>
                 </label><br></br>
                 <label>
                     Post to:
