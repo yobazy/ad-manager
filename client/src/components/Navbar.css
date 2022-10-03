@@ -4,6 +4,7 @@
   }
   
   .nav-menu {
+    background-color: #5F6F94;
     display: grid;
     grid-template-columns: repeat(4, auto);
     grid-gap: 10px;
@@ -19,7 +20,7 @@
   }
   
   .nav-links {
-    color: #fff;
+    color: #FEF5AC;
     display: flex;
     align-items: center;
     text-decoration: none;
