@@ -1,2 +1,4 @@
 This is where the bug fixes will be since ad-manager is not working at the moment.
 
+- Styling of create ad section
+- Take submitted ad data and display at bottom
