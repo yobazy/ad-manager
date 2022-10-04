@@ -26,9 +26,8 @@ export default function AdForm(props) {
     const handleSubmit = (event) => {
         // prevents the submit button from refreshing the page
             event.preventDefault();
-            // console.log(state)
             // setAdsInfo={adInfo}
-            props.func([adInfo]);
+            props.func([...props.ads, adInfo]);
     };
 
     return (
