@@ -10,6 +10,9 @@ export default function ViewAds(props) {
             <h2>My Ads</h2>
             <div className="ad-container">
                 <p>Title: {listing1.title}</p>
+                <p>Price: {listing1.price}</p>
+                <p>Description: {listing1.description}</p>
+
             </div>
             {/* <p>{props}</p> */}
         </div>
