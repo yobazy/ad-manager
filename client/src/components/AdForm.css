@@ -1,20 +1,40 @@
 .adform {
     margin: auto;
     width: 50%;
-    color:orange;
-    background-color:rgb(62, 62, 62);
+    color:#FEF5AC;
+    background-color:#5F6F94;
     align-content: center;
     justify-content: center;
     align-items: center;
     border-color: 10px dotted red;
+    /* text-align: center; */
 }
 
 .element { 
     margin: auto;
     width: 50%;
     border-color: 2px dotted red;
+    text-align: center;
 }
 
 .center {
     text-align: center;
+}
+
+.custom-field {
+    font-size: 14px;
+    position: relative;
+  }
+  
+.custom-field {
+    border: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: #f2f2f2;
+    padding: 10px;
+    border-radius: 3px;
+    width: 250px;
+    font-size: 14px;
 }

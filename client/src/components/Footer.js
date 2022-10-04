@@ -1,10 +1,11 @@
 import React from "react";
+import './Footer.css';
 
 function Footer() {
     return (
         <div class='footer-container'>
             <section>
-                <p>Footer</p>
+                <p>Thanks for using AdMan!</p>
             </section>
         </div>
     )

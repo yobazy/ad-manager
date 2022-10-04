@@ -12,7 +12,7 @@ import './AdForm.css';
 //     console.log(contactInfo);
 // };
 
-export default function AdForm() {
+export default function AdForm(props) {
     const [adInfo, setAdInfo] = useState({
         title: "",
         price: "",
@@ -26,7 +26,9 @@ export default function AdForm() {
     const handleSubmit = (event) => {
         // prevents the submit button from refreshing the page
             event.preventDefault();
-            console.log(adInfo);
+            // console.log(state)
+            // setAdsInfo={adInfo}
+            props.func([adInfo]);
     };
 
     return (
