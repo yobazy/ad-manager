@@ -33,7 +33,13 @@ export default function Navbar() {
                         <li className="nav-item">
                             <a href="/view" className="nav-links" onClick={closeMobileMenu}>View Ad</a>
                         </li>
-                        {/* Show  */}
+                        <li className="nav-logout">
+                            <a href="/view" className="nav-links" onClick={closeMobileMenu}>Log Out</a>
+                        </li>
+                        {/* The following should show when not logged in */}
+                        <li className="nav-item">
+                            <a href="/sign-up" className="nav-links" onClick={closeMobileMenu}>Log In</a>
+                        </li>
                         <li className="nav-item">
                             <a href="/sign-up" className="nav-links" onClick={closeMobileMenu}>Sign Up</a>
                         </li>
