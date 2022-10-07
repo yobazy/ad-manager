@@ -1,6 +1,7 @@
 import React,{ useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css'
+import logo from '../images/logo.png';
 
 export default function Navbar() {
     const [click, setClick] = useState(false);
@@ -16,7 +17,7 @@ export default function Navbar() {
             <nav className="navbar">
                 <div className="navbar-container">
                     <div className="logo-name">
-                        <img alt="AdMan"></img>
+                        <img src={logo} alt="logo"></img>
                         <a href="/" className="nav-links">AdMan</a>
                         <div className="menu-icon" onClick={handleClick}>
                             <i className={click ? 'fas fa-times' : 'fas fa-bars'}></i>
@@ -33,7 +34,7 @@ export default function Navbar() {
                         <li className="nav-item">
                             <a href="/view" className="nav-links" onClick={closeMobileMenu}>View Ad</a>
                         </li>
-                        <li className="nav-logout">
+                        <li className="nav-item nav-log">
                             <a href="/view" className="nav-links" onClick={closeMobileMenu}>Log Out</a>
                         </li>
                         {/* The following should show when not logged in */}
