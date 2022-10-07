@@ -15,7 +15,8 @@ export default function Navbar() {
     return  (
             <nav className="navbar">
                 <div className="navbar-container">
-                    <div className="">
+                    <div className="logo-name">
+                        <img alt="AdMan"></img>
                         <a href="/" className="nav-links">AdMan</a>
                         <div className="menu-icon" onClick={handleClick}>
                             <i className={click ? 'fas fa-times' : 'fas fa-bars'}></i>
@@ -25,12 +26,14 @@ export default function Navbar() {
                         <li className="nav-item">
                             <a href="/" className="nav-links" onClick={closeMobileMenu}>Home</a>
                         </li>
+                        {/* The following should show when logged in */}
                         <li className="nav-item">
                             <a href="/create" className="nav-links" onClick={closeMobileMenu}>Create Ad</a>
                         </li>
                         <li className="nav-item">
                             <a href="/view" className="nav-links" onClick={closeMobileMenu}>View Ad</a>
                         </li>
+                        {/* Show  */}
                         <li className="nav-item">
                             <a href="/sign-up" className="nav-links" onClick={closeMobileMenu}>Sign Up</a>
                         </li>
