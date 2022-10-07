@@ -17,7 +17,7 @@ export default function Navbar() {
             <nav className="navbar">
                 <div className="navbar-container">
                     <div className="logo-name">
-                        <img src={logo} alt="logo"></img>
+                        <img src={logo} width={40} alt="logo"></img>
                         <a href="/" className="nav-links">AdMan</a>
                         <div className="menu-icon" onClick={handleClick}>
                             <i className={click ? 'fas fa-times' : 'fas fa-bars'}></i>
