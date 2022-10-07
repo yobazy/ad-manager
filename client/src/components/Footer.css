@@ -5,13 +5,13 @@
     text-align: center;
 }
 
-.links > li {
+.social-link {
     display: block;
     border: 2px dotted white;
     padding: 20px;
   }
   
-.links  {
+.social-links  {
     border: 2px dotted red;
     display: flex;
     justify-content: center;
