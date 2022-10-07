@@ -5,8 +5,11 @@ import Footer from './components/Footer';
 import AdForm from './components/AdForm';
 import ViewAds from './components/pages/ViewAds';
 import './App.css'
+import Home from './routes/Home';
+import Create from './routes/Create';
+import View from './routes/View';
 
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route, Link, BrowserRouter} from 'react-router-dom';
 
 const switchListing = function switchToListing() {
 
@@ -17,7 +20,13 @@ function App() {
     title: "example",
     price: "$10",
     description: ""
-    }]);
+    },
+    {
+      title: "example2",
+      price: "$11",
+      description: ""
+      }
+    ]);
 
   const pull_data = (newAd) => {
     console.log('newAd',newAd)
@@ -28,22 +37,14 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      {/* <Router>
-        <Navbar></Navbar>
-        <Routes>
-          <Router path="/" exact/>
-        </Routes>
-      </Router> */}
       <body>
-        <section className="container">
-          <h1 className="text">Welcome user!</h1>
-          <p className="text">Please sign in to view your ads and create new postings that can be posted on facebook marketplace and kijiji.</p>
-        </section>
-        {/* Can remove the following line */}
-        {/* <button type="button">Create Ad</button> */}
-        {/* <h3>View my ads</h3> */}
-        <AdForm func={setAdsInfo}></AdForm>
-        <ViewAds listings={adsInfo}></ViewAds>
+        <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/create" element={<Create adsInfo={adsInfo} setAdsInfo={pull_data}/>} />
+          <Route path="/view" element={<View adsInfo={adsInfo}/>} />
+        </Routes>
+        </BrowserRouter>
         <Footer />
       </body>
     </div>
