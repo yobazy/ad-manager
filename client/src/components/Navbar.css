@@ -3,6 +3,11 @@
     font-size: 1.8rem;
   } */
 
+.logo-name {
+  border: 2px dotted white;
+  display: flex;
+  flex-direction: row;
+}
   .navbar-container {
     display: flex;
     flex-direction: row;
