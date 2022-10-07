@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-// import './App.css'
+import './Home.css'
 
 function Home() {
     return (
@@ -10,10 +10,14 @@ function Home() {
         <body>
                 <section className="container" id="welcome">
                 <h1 className="text">Welcome user!</h1>
-                <p className="text">Please sign in to view your ads and create new postings that can be posted on facebook marketplace and kijiji.</p>
-                <div>
-                    <button>Sign in</button>
-                    <button>Register</button>
+                <p className="text">Please log in to view your ads and create new postings that can be posted on facebook marketplace and kijiji.</p>
+                <div className="images-container">
+                    <img className="example-ad" alt="example"></img>
+                    <img className="example-ad" alt="example"></img>
+                </div>
+                <div className="home-buttons">
+                    <button className="home-button">Log in</button>
+                    <button className="home-button">Sign up</button>
                 </div>
                 </section>
             {/* <Route path="/create">
