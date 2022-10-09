@@ -2,7 +2,26 @@
 
 } */
 
+.home-buttons {
+    border:2px dotted blue;
+    display:flex;
+    width: 10%;
+    justify-content: space-around;
+    align-content: center;
+}
 .home-button    {
     color:white;
     background-color: #1C3879;
+}
+
+.images-container   {
+    padding: 10px;
+    margin:auto;
+    display:flex;
+    justify-content: space-around;
+    width:50%;
+}
+
+.container {
+    justify-content: center;
 }
