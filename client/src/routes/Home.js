@@ -15,14 +15,18 @@ function Home() {
         <body>
                 <section className="container" id="welcome">
                 <h1 className="text">Welcome user!</h1>
-                <p className="text">Please log in to view your ads and create new postings that can be posted on facebook marketplace and kijiji.</p>
                 <div className="images-container">
-                    <img src={ad2} className="example-ad" alt="example"></img>
-                    <img src={ad3} className="example-ad" alt="example"></img>
+                    <img src={ad2} width={200} className="example-ad" alt="example"></img>
+                    <img src={ad2} width={200} className="example-ad" alt="example"></img>
                 </div>
+                <p className="text">Please log in to view your ads and create new postings that can be posted on facebook marketplace and kijiji.</p>
                 <div className="home-buttons">
+                    <form action="/login">
                     <button className="home-button">Log in</button>
+                    </form>
+                    <form action="/signup">
                     <button className="home-button">Sign up</button>
+                    </form>
                 </div>
                 </section>
             {/* <Route path="/create">
