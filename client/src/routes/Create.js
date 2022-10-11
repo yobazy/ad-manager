@@ -35,7 +35,7 @@ function Create(props) {
                 <p>You can create a new listing using the form below</p>
             </div>
                 <AdForm ads={props.adsInfo} func={props.setAdsInfo}></AdForm>
-                <ViewAds listings={props.adsInfo}></ViewAds>
+                {/* <ViewAds listings={props.adsInfo}></ViewAds> */}
         </div>
     );
 }
