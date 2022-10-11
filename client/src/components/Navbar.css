@@ -46,17 +46,16 @@
 
   /* padding:0 0.5rem 0 0.5rem; */
 
-/* .navbar-logo {
+.navbar-logo {
   display: grid;
   border: 2px dotted red;
   color: #fef5ac;
   display: flex;
   flex-direction: row;
-}  */
+} 
 
 .nav-items {
   height: 80px;
-
 }
 
 /* .nav-log {
@@ -64,7 +63,7 @@
   color: #eae3d2;
   background-color: blue;
 }
-
+*/
 .nav-links {
   color: #eae3d2;
   display: flex;
@@ -72,12 +71,12 @@
   text-decoration: none;
   padding: 0 0.8rem 0 0.8rem;
   height: 100%;
-} */
+}
 
-/* .nav-links:hover {
+.nav-links:hover {
   border-bottom: 4px solid #fff;
   transition: all 0.2s ease-out;
-} */
+}
 
 .fa-bars {
   color: #fff;
