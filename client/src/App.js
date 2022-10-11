@@ -8,6 +8,9 @@ import './App.css'
 import Home from './routes/Home';
 import Create from './routes/Create';
 import View from './routes/View';
+import Login from './routes/Login';
+import Signup from './routes/Signup';
+
 
 import {BrowserRouter as Router, Routes, Route, Link, BrowserRouter} from 'react-router-dom';
 
@@ -16,21 +19,24 @@ const switchListing = function switchToListing() {
 }
 
 function App() {
-  const [adsInfo, setAdsInfo] = useState([{
+  const [adsInfo, setAdsInfo] = useState([
+    {
+    listingNumber: 1,
     title: "example",
     price: "$10",
     description: ""
     },
     {
+      listingNumber: 2,
       title: "example2",
       price: "$11",
       description: ""
-      }
+    }
     ]);
 
-  const pull_data = (newAd) => {
+  const updateAds = (newAd) => {
     console.log('newAd',newAd)
-    setAdsInfo(newAd)
+    setAdsInfo([...adsInfo, newAd])
     console.log(adsInfo)
   }
 
@@ -41,8 +47,11 @@ function App() {
         <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/create" element={<Create adsInfo={adsInfo} setAdsInfo={pull_data}/>} />
+          <Route path="/create" element={<Create adsInfo={adsInfo} setAdsInfo={updateAds}/>} />
           <Route path="/view" element={<View adsInfo={adsInfo}/>} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          {/* <Route path="/logout" element={<Logout />} /> */}
         </Routes>
         </BrowserRouter>
         <Footer />
