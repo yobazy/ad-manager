@@ -22,15 +22,15 @@ function App() {
   const [adsInfo, setAdsInfo] = useState([
     {
     listingNumber: 1,
-    title: "example",
-    price: "$10",
-    description: ""
+    title: "2004 black camry!! Needs to go!",
+    price: "$4000",
+    description: "Here we have for sale a 2004 black camry. Been a few accidents but we will surive."
     },
     {
       listingNumber: 2,
-      title: "example2",
+      title: "Half eaten burrito, good as new.",
       price: "$11",
-      description: ""
+      description: "Title says it all."
     }
     ]);
 
