@@ -32,12 +32,12 @@ export default function Navbar() {
             </Link>
           </li>
           <li className="nav-item">
-            <Link href="/view" className="nav-links" onClick={closeMobileMenu}>
+            <Link to="/view" className="nav-links" onClick={closeMobileMenu}>
               View Ad
             </Link>
           </li>
           <li className="nav-item nav-log">
-            <Link href="/logout" className="nav-links" onClick={closeMobileMenu}>
+            <Link to="/logout" className="nav-links" onClick={closeMobileMenu}>
               Log Out
             </Link>
           </li>
@@ -52,9 +52,9 @@ export default function Navbar() {
           </Link>
         </li>
         <li className="nav-item">
-          <a href="/signup" className="nav-links" onClick={closeMobileMenu}>
+          <Link href="/signup" className="nav-links" onClick={closeMobileMenu}>
             Sign Up
-          </a>
+          </Link>
         </li>
       </>
     );
