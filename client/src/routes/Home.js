@@ -13,14 +13,14 @@ function Home() {
     return (
         <div className="App">
         <body>
-                <section className="container" id="welcome">
-                <h1 className="text">Welcome user!</h1>
-                <div className="images-container">
+            <section className="container border" id="welcome">
+                <h1 className="text">Welcome to Adman!</h1>
+                <div className="images-container center">
                     <img src={ad2} width={200} className="example-ad" alt="example"></img>
                     <img src={ad2} width={200} className="example-ad" alt="example"></img>
                 </div>
                 <p className="text">Please log in to view your ads and create new postings that can be posted on facebook marketplace and kijiji.</p>
-                <div className="home-buttons">
+                <div className="home-buttons center">
                     <form action="/login">
                     <button className="home-button">Log in</button>
                     </form>
@@ -28,7 +28,7 @@ function Home() {
                     <button className="home-button">Sign up</button>
                     </form>
                 </div>
-                </section>
+            </section>
             {/* <Route path="/create">
                 <AdForm ads={adsInfo} func={setAdsInfo}></AdForm>
             </Route>
