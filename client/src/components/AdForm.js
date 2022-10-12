@@ -45,7 +45,7 @@ export default function AdForm(props) {
                         <label className="label">
                                 Title:
                         </label>
-                        <input type="text" name="title" className="custom-field" value={adInfo.price} onChange={handleChange}/>
+                        <input type="text" name="title" className="custom-field" value={adInfo.title} onChange={handleChange}/>
                         <br></br>
                     </div>
                     <div className="field-container">
@@ -65,7 +65,7 @@ export default function AdForm(props) {
                     <div className="field-container">
                         <label>
                             Condition:
-                        
+                
                         </label>
                         <select className="custom-field"
                                 // value={this.state.value} 
