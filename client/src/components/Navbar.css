@@ -7,7 +7,8 @@
 .navbar-container {
   display: flex;
   flex-direction: row;
-  /* align-items: center; */
+  justify-content: space-between;
+  align-items: center;
   border: 2px dotted black;
   background-color: #1c3879;
 }
@@ -23,10 +24,10 @@
   border: 2px dotted white;
   display: flex;
   flex-direction: row;
-  height:100%;
+  height:inherit;
   list-style: none;
   /* text-align: center; */
-  /* padding: 10px; */
+  margin-left:0;
   /* width: 60vw; */
   justify-content: end;
   /* margin-right: 2rem; */
