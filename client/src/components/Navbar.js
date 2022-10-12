@@ -27,19 +27,19 @@ export default function Navbar() {
       return (
         <>
           <li className="nav-item">
-            <a href="/create" className="nav-links" onClick={closeMobileMenu}>
+            <Link to="/create" className="nav-links" onClick={closeMobileMenu}>
               Create Ad
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a href="/view" className="nav-links" onClick={closeMobileMenu}>
+            <Link href="/view" className="nav-links" onClick={closeMobileMenu}>
               View Ad
-            </a>
+            </Link>
           </li>
           <li className="nav-item nav-log">
-            <a href="/logout" className="nav-links" onClick={closeMobileMenu}>
+            <Link href="/logout" className="nav-links" onClick={closeMobileMenu}>
               Log Out
-            </a>
+            </Link>
           </li>
         </>
       );
@@ -47,9 +47,9 @@ export default function Navbar() {
     return (
       <>
         <li className="nav-item">
-          <a href="/login" className="nav-links" onClick={closeMobileMenu}>
+          <Link to="/login" className="nav-links" onClick={closeMobileMenu}>
             Log In
-          </a>
+          </Link>
         </li>
         <li className="nav-item">
           <a href="/signup" className="nav-links" onClick={closeMobileMenu}>
@@ -75,9 +75,9 @@ export default function Navbar() {
         <div className="nav-items">
           <ul className={click ? "nav-menu-active" : "nav-menu"}>
             <li className="nav-item">
-              <a href="/" className="nav-links" onClick={closeMobileMenu}>
+              <Link to="/" className="nav-links" onClick={closeMobileMenu}>
                 Home
-              </a>
+              </Link>
             </li>
             <CheckUser isLoggedIn="true" />
             {/* The following should show when not logged in */}

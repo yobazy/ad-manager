@@ -42,10 +42,11 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar />
-      <body>
+
         <BrowserRouter>
+        <Navbar />
         <Routes>
+          
           <Route path="/" element={<Home />} />
           <Route path="/create" element={<Create adsInfo={adsInfo} setAdsInfo={updateAds}/>} />
           <Route path="/view" element={<View adsInfo={adsInfo}/>} />
@@ -55,7 +56,6 @@ function App() {
         </Routes>
         </BrowserRouter>
         <Footer />
-      </body>
     </div>
   );
 }
