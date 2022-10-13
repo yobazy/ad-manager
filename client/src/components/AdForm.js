@@ -21,7 +21,7 @@ export default function AdForm(props) {
             event.preventDefault();
             console.log('Form is being submitted')
             setSubmitting(true);
-            props.setAds([adInfo])
+            props.setAds(adInfo)
             navigate("/view")
     };
 
