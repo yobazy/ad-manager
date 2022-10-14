@@ -14,16 +14,20 @@ export default function Navbar() {
     setClick(false);
   };
 
-  function signedOut() {
-    console.log("hehe");
+  let isLoggedIn =true
+
+  function logOut() {
+    console.log('logging out')
+    isLoggedIn = false;
+    console.log(isLoggedIn)
   }
 
   function CheckUser(props) {
     console.log("check user called");
     console.log(props, "props");
-    const isLoggedIn = props.isLoggedIn;
+    // let isLoggedIn = props.isLoggedIn;
 
-    if (isLoggedIn) {
+    if (props.isLoggedIn) {
       return (
         <>
           <li className="nav-item">
@@ -37,9 +41,10 @@ export default function Navbar() {
             </Link>
           </li>
           <li className="nav-item nav-log">
-            <Link to="/logout" className="nav-links" onClick={closeMobileMenu}>
+            <button onClick={props.logOut}>Log Out</button>
+            {/* <Link to="/logout" className="nav-links" onClick={closeMobileMenu}>
               Log Out
-            </Link>
+            </Link> */}
           </li>
         </>
       );
@@ -72,14 +77,14 @@ export default function Navbar() {
             <i className={click ? "fas fa-times" : "fas fa-bars"}></i>
           </div>
         </div>
-        <div className="nav-items">
-          <ul className={click ? "nav-menu-active" : "nav-menu"}>
+        <div >
+          <ul className={click ? "nav-menu-active nav-items" : "nav-menu nav-items"}>
             <li className="nav-item">
               <Link to="/" className="nav-links" onClick={closeMobileMenu}>
                 Home
               </Link>
             </li>
-            <CheckUser isLoggedIn="true" />
+            <CheckUser className="nav-links" isLoggedIn={isLoggedIn} logOut={logOut}/>
             {/* The following should show when not logged in */}
           </ul>
         </div>
