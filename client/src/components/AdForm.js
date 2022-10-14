@@ -7,7 +7,8 @@ export default function AdForm(props) {
     const [adInfo, setAdInfo] = useState({
         title: "",
         price: "",
-        description: ""
+        description: "",
+        photo:""
         });
     
     const [submitting, setSubmitting] = useState(false);
@@ -29,16 +30,16 @@ export default function AdForm(props) {
         <div className="adform-container">
             <form className="element" onSubmit={handleSubmit}>
                 <div className="photo-container">
-                    <label for="img" className="center">Photos (add up to 10):</label><br></br>
+                    <label for="img" className="center">Photos (add up to 1):</label><br></br>
+                        <input type="file" id="img" name="img" accept="image/*" className="border"/><br></br>
+                        {/* <input type="file" id="img" name="img" accept="image/*" /><br></br>
                         <input type="file" id="img" name="img" accept="image/*" /><br></br>
                         <input type="file" id="img" name="img" accept="image/*" /><br></br>
                         <input type="file" id="img" name="img" accept="image/*" /><br></br>
                         <input type="file" id="img" name="img" accept="image/*" /><br></br>
                         <input type="file" id="img" name="img" accept="image/*" /><br></br>
                         <input type="file" id="img" name="img" accept="image/*" /><br></br>
-                        <input type="file" id="img" name="img" accept="image/*" /><br></br>
-                        <input type="file" id="img" name="img" accept="image/*" /><br></br>
-                        <input type="file" id="img" name="img" accept="image/*" /><br></br>
+                        <input type="file" id="img" name="img" accept="image/*" /><br></br> */}
                 </div>
                 <div className="fields-container">
                     <div className="field-container">
@@ -85,7 +86,7 @@ export default function AdForm(props) {
                         <br></br>
                     </div>
                     <label>
-                        Post to:
+                        Post to:<br></br>
                         <label>Fb Marketplace</label>
                         <input type="checkbox" />
                         <label>Kiiji</label>

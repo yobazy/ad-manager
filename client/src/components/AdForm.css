@@ -1,30 +1,29 @@
-.adform {
+.adform-container {
     margin: auto;
     width: 50%;
-    color:#FEF5AC;
-    background-color:#5F6F94;
+    color:#1C3879;
+    background-color:#eae3d2a2;
     align-content: center;
     justify-content: center;
     align-items: center;
-    border-color: 10px dotted red;
+    border-radius: 10px;
+    padding: 10px;
     /* text-align: center; */
 }
 
 .element { 
     margin: auto;
-    width: 50%;
-    border-color: 2px dotted red;
+    width: 80%;
     text-align: center;
+    border: 2px dotted red;
 }
 
 .center {
+    /* display:flex;
+    flex-direction: column; */
     text-align: center;
+    justify-content: center;
 }
-
-.custom-field {
-    font-size: 14px;
-    position: relative;
-  }
   
 .custom-field {
     border: none;
@@ -35,6 +34,40 @@
     background: #f2f2f2;
     padding: 10px;
     border-radius: 3px;
-    width: 250px;
-    font-size: 14px;
+    /* width: 250px; */
+    font-size: 10px;
+}
+
+.fields-container    {
+    border: 2px solid black;
+    padding: 10px;
+    padding-left: 30px;
+}
+
+.photo-container {
+    border: 2px solid yellow;
+    justify-content: center;
+}
+
+.field-container  {
+    display: grid; 
+    grid-template-columns: 0.7fr 1fr 1fr; 
+    grid-template-rows: 1fr; 
+    text-align: center;
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "label custom-field custom-field"; 
+    border:2px dotted blue;
+
+}
+
+.label {
+    grid-area: label;
+    border:2px dotted red;
+}
+
+.border {
+    border: 2px dotted black;
+    align-content:center;
+    padding-left: 20px;
 }
