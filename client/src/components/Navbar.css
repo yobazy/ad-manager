@@ -9,9 +9,8 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  border: 2px dotted black;
   background-color: #1c3879;
-  height: 30px;
+  height: 45px;
 }
 
 .logo-name {
