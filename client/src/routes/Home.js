@@ -3,8 +3,8 @@ import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import "./Home.css";
-import ad2 from "../images/ad2.png";
-import ad3 from "../images/ad3.png";
+import kijiji from "../images/kijiji.jpeg";
+import fb from "../images/fb.png";
 
 // import ad2 from 'client/src/images/ad2.png';
 
@@ -34,14 +34,14 @@ function Home() {
           <h1 className="text">Welcome to Adman!</h1>
           <div className="images-container center">
             <img
-              src={ad2}
-              width={200}
+              src={kijiji}
+              width={150}
               className="example-ad"
               alt="example"
             ></img>
             <img
-              src={ad2}
-              width={200}
+              src={fb}
+              width={150}
               className="example-ad"
               alt="example"
             ></img>
