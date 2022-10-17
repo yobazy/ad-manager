@@ -15,12 +15,9 @@
     margin: auto;
     width: 80%;
     text-align: center;
-    border: 2px dotted red;
 }
 
 .center {
-    /* display:flex;
-    flex-direction: column; */
     text-align: center;
     justify-content: center;
 }
@@ -39,13 +36,11 @@
 }
 
 .fields-container    {
-    border: 2px solid black;
     padding: 10px;
     padding-left: 30px;
 }
 
 .photo-container {
-    border: 2px solid yellow;
     justify-content: center;
 }
 
@@ -57,17 +52,14 @@
     gap: 0px 0px; 
     grid-template-areas: 
       "label custom-field custom-field"; 
-    border:2px dotted blue;
 
 }
 
 .label {
     grid-area: label;
-    border:2px dotted red;
 }
 
 .border {
-    border: 2px dotted black;
     align-content:center;
     padding-left: 20px;
 }

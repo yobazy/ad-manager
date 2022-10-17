@@ -4,7 +4,11 @@ import './AdForm.css';
 import {Link, Routes, Route, useNavigate, Navigate} from 'react-router-dom';
 
 export default function AdForm(props) {
+
+    console.log('listingNo', props.listingNumber)
+
     const [adInfo, setAdInfo] = useState({
+        listingNumber:props.listingNumber,
         title: "",
         price: "",
         description: "",
@@ -23,7 +27,8 @@ export default function AdForm(props) {
             console.log('Form is being submitted')
             setSubmitting(true);
             props.setAds(adInfo)
-            navigate("/view")
+            let navigateURL = "/listing/"+adInfo.listingNumber
+            navigate(navigateURL)
     };
 
     return (
@@ -31,7 +36,7 @@ export default function AdForm(props) {
             <form className="element" onSubmit={handleSubmit}>
                 <div className="photo-container">
                     <label for="img" className="center">Photos (add up to 1):</label><br></br>
-                        <input type="file" id="img" name="img" accept="image/*" className="border"/><br></br>
+                        <input type="file" id="img" name="img" accept="image/*" className=""/><br></br>
                         {/* <input type="file" id="img" name="img" accept="image/*" /><br></br>
                         <input type="file" id="img" name="img" accept="image/*" /><br></br>
                         <input type="file" id="img" name="img" accept="image/*" /><br></br>
