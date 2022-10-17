@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, Navigate } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../images/logo.png";
 
-export default function Navbar() {
+export default function Navbar(props) {
   const [click, setClick] = useState(false);
+  const navigate = useNavigate();
 
   const handleClick = () => {
     setClick(!click);
@@ -14,20 +15,18 @@ export default function Navbar() {
     setClick(false);
   };
 
-  let isLoggedIn =true
+  const logOut = () =>  {
+    console.log('Logging out...')
+    props.switchLogin()
+    navigate("/")
 
-  function logOut() {
-    console.log('logging out')
-    isLoggedIn = false;
-    console.log(isLoggedIn)
   }
 
   function CheckUser(props) {
     console.log("check user called");
     console.log(props, "props");
-    // let isLoggedIn = props.isLoggedIn;
-
-    if (props.isLoggedIn) {
+    
+    if (props.token) {
       return (
         <>
           <li className="nav-item">
@@ -41,8 +40,9 @@ export default function Navbar() {
             </Link>
           </li>
           <li className="nav-item nav-log">
-            <button onClick={props.logOut}>Log Out</button>
-            {/* <Link to="/logout" className="nav-links" onClick={closeMobileMenu}>
+            {/* <button onClick={props.logOut}>Log Out</button> */}
+            <button onClick={logOut} className="nav-links">Log Out</button>
+            {/* <Link to="/logout" onClick={props.switchLogin} className="nav-links">
               Log Out
             </Link> */}
           </li>
@@ -56,11 +56,11 @@ export default function Navbar() {
             Log In
           </Link>
         </li>
-        <li className="nav-item">
+        {/* <li className="nav-item">
           <Link href="/signup" className="nav-links" onClick={closeMobileMenu}>
             Sign Up
           </Link>
-        </li>
+        </li> */}
       </>
     );
   }
@@ -84,7 +84,7 @@ export default function Navbar() {
                 Home
               </Link>
             </li>
-            <CheckUser className="nav-links" isLoggedIn={isLoggedIn} logOut={logOut}/>
+            <CheckUser className="nav-links" token={props.token} logOut={props.switchLogin}/>
             {/* The following should show when not logged in */}
           </ul>
         </div>

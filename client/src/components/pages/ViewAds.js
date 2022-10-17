@@ -9,14 +9,16 @@ export default function ViewAds(props) {
     const listAds = props.listings.map((listing) => {
     
         return (
-            <div className="ads-container">
+            <div>
                 <div className="ad-container">
-                    <p>Title: {listing.title}</p>
-                    <p>Price: {listing.price}</p>
-                    <p>Description: {listing.description}</p>
-
+                    <img src={listing.imagePath} className="border img" width={300} alt="pic"></img>
+                    <div className="ad-info border">
+                        <h3>Title: {listing.title}</h3>
+                        <h5>Price: {listing.price}</h5>
+                        <h5>Description:</h5>
+                        <h5>{listing.description}</h5>
+                    </div>
                 </div>
-                {/* <p>{props}</p> */}
             </div>
         );
     })
@@ -24,7 +26,7 @@ export default function ViewAds(props) {
     return (
         <section className="events">
           <h1 className="events__header text--light">My Ads</h1>
-          <ul className="events__list">{listAds}</ul>
+          <ul className="ads-conatiner">{listAds}</ul>
         </section>
       );
 }

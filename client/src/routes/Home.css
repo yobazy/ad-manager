@@ -3,7 +3,6 @@
 } */
 
 .home-buttons {
-    border:2px dotted blue;
     display:flex;
     width: 20%;
     justify-content: space-around;
