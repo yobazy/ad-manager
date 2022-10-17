@@ -70,7 +70,7 @@ export default function Navbar(props) {
       <div className="navbar-container">
         <div className="logo-name nav-items">
           <img src={logo} width={40} alt="logo"></img>
-          <a href="/" className="nav-links">
+          <a href="/" className="nav-links name">
             AdMan
           </a>
           {/* <div className="menu-icon" onClick={handleClick}>
