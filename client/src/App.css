@@ -10,3 +10,11 @@ body {
 .text   {
     color: #EAE3D2;
 }
+
+.border  {
+    border: 2px solid black;
+}
+
+.page-container {
+    min-height: 400px;
+}

@@ -60,6 +60,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Navbar token={token} switchLogin={switchLogin}/>
+        <div className="page-container">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route
@@ -72,6 +73,7 @@ function App() {
           <Route path="/listing/:id" element={<Listing adsArr={adsInfo}/>} />
           {/* <Route path="/logout" element={<Logout />} /> */}
         </Routes>
+        </div>
       </BrowserRouter>
       <Footer />
     </div>
