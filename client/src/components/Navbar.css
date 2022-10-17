@@ -11,17 +11,16 @@
   align-items: center;
   border: 2px dotted black;
   background-color: #1c3879;
+  height: 30px;
 }
 
 .logo-name {
-  border: 2px dotted white;
   display: flex;
   flex-direction: row;
   height:inherit;
 }
 
 .nav-menu {
-  border: 2px dotted white;
   display: flex;
   flex-direction: row;
   height:inherit;
